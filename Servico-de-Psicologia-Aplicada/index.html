@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cadastro do Paciente</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var tel = document.getElementById("tel").value;
+      var date = document.getElementById("date").value;
+      var password = document.getElementById("password").value;
+
+      if (name == "") {
+        alert("Por favor, digite o nome.");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Por favor, digite o e-mail.");
+        return false;
+      }
+
+      if (tel == "") {
+        alert("Por favor, digite o telefone.");
+        return false;
+      }
+
+      if (date == "") {
+        alert("Por favor, selecione a data de nascimento.");
+        return false;
+      }
+
+      if (password == "") {
+        alert("Por favor, digite a senha.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <main>
+    <h1>Faça seu cadastro:</h1>
+    <form action="" onsubmit="return validateForm()">
+      <label for="name">
+        <span>Nome:</span>
+        <input type="text" id="name" name="name">
+      </label>
+
+      <label for="email">
+        <span>E-mail:</span>
+        <input type="email" id="email" name="email">        
+      </label>
+      
+      <label for="tel">
+        <span>Telefone para contato:</span>
+        <input type="tel" id="tel" name="tel">
+      </label>
+      
+      <label for="date">
+        <span>Data de Nascimento:</span>
+        <input type="date" id="date" name="date">
+      </label>
+      
+      <label for="password">
+        <span>Senha:</span>
+        <input type="password" id="password" name="password">
+      </label>
+      <input type="submit" value="Fazer cadastro">
+    </form>
+  </main>
+  <section class="images"></section>
+</body>
+</html>
